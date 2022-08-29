@@ -1,34 +1,11 @@
-import { Fragment, useState } from "react";
+import { useState } from "react";
 
 import "./App.css";
+import Counter from "./Counter";
+import User from "./User";
 
 const App = () => {
   const [counter, setCounter] = useState(0);
-
-  const Counter = () => {
-    return (
-      <Fragment>
-        <button onClick={() => setCounter((prevCounter) => prevCounter + 1)}>
-          +
-        </button>
-        <h1>{counter}</h1>
-        <button onClick={() => setCounter((prevCounter) => prevCounter - 1)}>
-          -
-        </button>
-        <p>Total count: {counter}</p>
-      </Fragment>
-    );
-  };
-
-  const User = ({ name, age }) => {
-    return (
-      <>
-        <p>
-          Username: {name}, age: {age}
-        </p>
-      </>
-    );
-  };
 
   return (
     <div className="App">
@@ -37,10 +14,26 @@ const App = () => {
         <User name="Von" />
         <User name="Time is gone" />
         <User name="test" />
-        <Counter />
+        <Counter counter={counter} setCounter={setCounter} />
       </header>
     </div>
   );
 };
 
 export default App;
+
+// assignment in JS
+// variables
+// objects (create, access, dot notation, indexes )
+// arrays (push,pop, unshift, shift, indexes )
+// object or array destructing
+// ternary operator && spread operator && optional chaining
+// array methods (map, find, findIndex)
+// functions, arrow functions
+// callbacks
+// events
+//
+
+// assignment in react
+// List of all the react hooks
+// explain useState, and useEffect
